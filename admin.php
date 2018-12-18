@@ -1,7 +1,9 @@
 <?php
 session_start();
-if($_SESSION["level"]==2){
-echo "Trang quản trị dành cho admin,<a href='../btlon.php'>(Đăng xuất)</a>";}
+if($_SESSION["level"]==3){
+header("location:wedquanly.php");
+exit();
+}
 else{
     header("location:../btlon.php");
     exit();
