@@ -1,8 +1,8 @@
 <?php
 require('catgheplayout/header.php');
 $loi=array();
-$user=$pass=$mail=NULL;
-$loi["username"]=NULL;
+$user=$pass=$mail=$level=NULL;
+$loi["username"]=$loi["level"]=NULL;
 $loi["password"]=NULL;
 $loi["email"]=$loi["register"]=NULL;
 
@@ -31,7 +31,15 @@ if(isset($_POST['ok']))
     {
         $mail=$_POST['txtmail'];
     }
-     if($user && $pass &&  $mail)
+    if(empty($_POST['access']))
+    {
+        $loi["level"]="* Xin vui lòng chọn tư cách đăng nhập</br>";
+    }
+    else
+    {
+        $level=$_POST['access'];
+    }
+     if($user && $pass &&  $mail && $level)
     {
         $conn =  mysqli_connect("localhost","root","","login");
         if(!$conn){
@@ -47,7 +55,7 @@ if(isset($_POST['ok']))
 
         else
         {
-            $sql = "INSERT INTO users (name , pass,email,level) VALUES ('$user','$pass','$mail','1')";
+            $sql = "INSERT INTO users (name , pass,email,level) VALUES ('$user','$pass','$mail','$level')";
          if (mysqli_query($conn, $sql))
                 //Thông báo nếu thành công
                 $loi["register"]='Đăng ký thành công';
@@ -60,11 +68,11 @@ if(isset($_POST['ok']))
     }
 }
 ?>
-<fieldset style="width:300px;margin:50px auto 0px;height:100px">
+<fieldset style="width:500px;margin:50px auto 0px;height:300px">
     <form action="dangky.php" method="POST">
         <table>
             <tr>
-                <td> Họ và tên: </td>
+                <td > Họ và tên: </td>
                 <td> <input type="text" name="txtn"></td>
             </tr>
             <tr>
@@ -74,6 +82,13 @@ if(isset($_POST['ok']))
             <tr>
             <td>Email:</td>
             <td><input type="text" name="txtmail"></td>
+            </tr>
+            <tr>
+            <td>Đăng ký với tư cách</td>
+            <td>
+            <input type="radio" name="access" value="1">Người xin việc 
+            <input type="radio" name="access" value="2">Nhà tuyển dụng
+            </td>
             </tr>
             <tr>
                 <td></td>
