@@ -1,0 +1,11 @@
+<?php
+session_start();
+if($_SESSION["level"]==3){
+header("location:wedquanly.php");
+exit();
+}
+else{
+    header("location:../btlon.php");
+    exit();
+}
+?>
