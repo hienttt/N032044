@@ -36,13 +36,19 @@ if(isset($_POST['ok']))
             {
                 $data=mysqli_fetch_assoc($result);
                 $_SESSION["level"]=$data["level"];
-                if($_SESSION["level"]==2){
+                if($_SESSION["level"]==3){
                     header("location:admin/admin.php");
                     exit();
                 }
                 else{
-                    header("location:btlon.php");
+                    if($_SESSION["level"]==2){
+                    header("location:nhatuyendung.php");
                      exit();}
+                    else{
+                        header("location:nguoixinviec.php");
+                        exit();
+                    }
+                    }
             }
             else{
                 $loi["login"]="Sai email hoặc mật khẩu";
