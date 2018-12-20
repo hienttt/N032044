@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tìm kiếm việc làm</title>
-    <link rel="stylesheet" href="catgheplayout/btlon.css" type="text/css">
+    <link rel="stylesheet" href="btlon.css" type="text/css">
     <script type="text/javascript" src="btlon.js"></script>
     <script src="btlon/jquery-3.3.1.min.js"></script>
     <script>

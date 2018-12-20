@@ -1,12 +1,37 @@
-<?php
-require('catgheplayout/header.php');
-?>
-<div id="slider" >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tìm kiếm việc làm</title>
+    <link rel="stylesheet" href="btlon.css" type="text/css">
+    <script type="text/javascript" src="btlon.js"></script>
+    <script src="btlon/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function())</script>
+</head>
+<body>
+    <div id="top">
+        <img src="anhbt/logo.jpg" alt="logo"  height="200px" width="800px">
+    </div>
+    <div id="menu">
+        <ul>
+            <li style="border-left:none"><a href="btlon.php">Trang chủ</a></li>
+            <li><a href="tuyendung.php">Tuyển dụng</a></li>
+            <li><a href="congty.php">Công ty</a></li>
+            <li><a href="dangky.php">Đăng ký</a></li>
+            <li><a href="dangnhap.php">Đăng nhập</a></li>
+        </ul>
+    </div>
+<div id="wrapper" >
+    <div id="main" style="height:300px">
     <ul>
         <li class="mySlides">S1</li>
         <li  class="mySlides">S2</li>
         <li class="mySlides">S3</li>
     </ul>
+    </div>
 </div>
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(0)"></span> 
@@ -48,7 +73,7 @@ require('catgheplayout/header.php');
   }
 </script>
 
-</script>
+
 <?php
 require('catgheplayout/buttom.php');
 ?>
