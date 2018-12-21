@@ -13,7 +13,7 @@
     <div id="top">
         <img src="catgheplayout/tệp ảnh/logo.jpg" alt="logo"  height="200px" width="800px">
     </div>
-    <div id="menu">
+    <div id="menu"
         <ul>
             <li style="border-left:none"><a href="btlon.php">Trang chủ</a></li>
             <li><a href="tuyendung.php">Tuyển dụng</a></li>
@@ -24,29 +24,30 @@
     </div>
     <div id='seach'>
         <h3>Tìm kiếm nhanh</h3>
-    <ul>
+    <form action="timkiem.php" method="POST">
+        <ul>
         <li style="margin-right : 100px" >
             <select name="cong_viec" >
-                <option value="job"> Công việc</option>
-                <option value="1">Kinh doanh</option>                                                      
-                <option value="2">Bán hàng</option>
-                <option value="3">Lao động phổ thông</option>
-                <option value="4">Chăm sóc khách hàng</option>
-                <option value="5">Tài chính/Kế toán/Kiểm toán</option>
-                <option value="6">Hành chính/Thư ký/Trợ lý</option>
-                <option value="7">Sinh viên/Mới tốt nghiệp/Thực tập</option>
-                <option value="8">Cơ khí/Kĩ thuật ứng dụng</option>
-                <option value="9">Điện/Điện tử/Điện lạnh</option>
-                <option value="10">Báo chí/Biên tập viên</option>
-                <option value="11">Bảo vệ/Vệ sĩ/An ninh</option>
-                <option value="12">Bất động sản</option>
-                <option value="13">Biên dịch/Phiên dịch</option>
-                <option value="14">Bưu chính viễn thông</option>
-                <option value="15">Công nghệ thông tin</option>
-                <option value="16">Dầu khí/Địa chất</option>
-                <option value="17">Dệt may</option>
-                <option value="18">Du lịch/Nhà hàng/Khách sạn</option>
-                <option value="19">Dược/Hóa chất/Sinh hóa</option>
+                <option value=""> Công việc</option>
+                <option value="Kinh doanh">Kinh doanh</option>                                                      
+                <option value="Bán hàng">Bán hàng</option>
+                <option value="Lao động phổ thông">Lao động phổ thông</option>
+                <option value="Chăm sóc khách hàng">Chăm sóc khách hàng</option>
+                <option value="Kế toán">Tài chính/Kế toán/Kiểm toán</option>
+                <option value="Thư ký">Hành chính/Thư ký/Trợ lý</option>
+                <option value="Thực tập">Sinh viên/Mới tốt nghiệp/Thực tập</option>
+                <option value="Cơ khí">Cơ khí/Kĩ thuật ứng dụng</option>
+                <option value="Điện lạnh">Điện/Điện tử/Điện lạnh</option>
+                <option value="Biên tập viên">Báo chí/Biên tập viên</option>
+                <option value="An ninh">Bảo vệ/Vệ sĩ/An ninh</option>
+                <option value="Bất động sản">Bất động sản</option>
+                <option value="Phiên dịch">Biên dịch/Phiên dịch</option>
+                <option value="Bưu chính viễn thông">Bưu chính viễn thông</option>
+                <option value="Công nghệ thông tin">Công nghệ thông tin</option>
+                <option value="Dầu khí">Dầu khí/Địa chất</option>
+                <option value="Dệt may">Dệt may</option>
+                <option value="Du lịch">Du lịch/Nhà hàng/Khách sạn</option>
+                <option value="Sinh hóa">Dược/Hóa chất/Sinh hóa</option>
                 <option value="20">Giải trí/Vui chơi</option>
                 <option value="21">Giáo dục/Đào tạo/Thư viện</option>
                 <option value="22">Giao thông/Vận tải/Thủy lợi/Cầu đường</option>
@@ -89,28 +90,28 @@
         <li style="margin-right:  100px" >
             <select name="Tinh_thanh" >
             <option value="">Chọn tỉnh thành</option>
-            <option value="1">Hồ Chí Minh</option>
-            <option value="2">Hà Nội</option>
-            <option value="3">An Giang</option>
-            <option value="4">Bạc Liêu</option>
-            <option value="5">Bà Rịa-Vũng Tàu</option>
-            <option value="6">Bắc Cạn</option>
-            <option value="7">Bắc Giang</option>
-            <option value="8">Bắc Ninh</option>
-            <option value="9">Bến Tre</option>
-            <option value="10">Bình Dương</option>
-            <option value="11">Bình Định</option>
-            <option value="12">Bình Phước</option>
-            <option value="13">Bình Thuận</option>
-            <option value="14">Cao Bằng</option>
-            <option value="15">Cà Mau</option>
-            <option value="16">Cần Thơ</option>
-            <option value="17">Đà Nẵng</option>
-            <option value="18">Đắk Lắk</option>
-            <option value="19">Đắk Nông</option>
-            <option value="20">Điện Biên</option>
-            <option value="21">Đồng Nai</option>
-            <option value="22">Đồng Tháp</option>
+            <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="An Giang">An Giang</option>
+            <option value="Bạc Liêu">Bạc Liêu</option>
+            <option value="Bà Rịa-Vũng Tàu">Bà Rịa-Vũng Tàu</option>
+            <option value="Bắc Cạn">Bắc Cạn</option>
+            <option value="Bắc Giang">Bắc Giang</option>
+            <option value="Bắc Ninh">Bắc Ninh</option>
+            <option value="Bến Tre">Bến Tre</option>
+            <option value="Bình Dương">Bình Dương</option>
+            <option value="Bình Định">Bình Định</option>
+            <option value="Bình Phước">Bình Phước</option>
+            <option value="Bình Thuận">Bình Thuận</option>
+            <option value="Cao Bằng">Cao Bằng</option>
+            <option value="Cà Mau">Cà Mau</option>
+            <option value="Cần Thơ">Cần Thơ</option>
+            <option value="Đà Nẵng">Đà Nẵng</option>
+            <option value="Đắk Lắk">Đắk Lắk</option>
+            <option value="Đắk Nôn">Đắk Nông</option>
+            <option value="Điện Biên">Điện Biên</option>
+            <option value="Đồng Nai">Đồng Nai</option>
+            <option value="Đồng Tháp">Đồng Tháp</option>
             <option value="23">Gia Lai</option>
             <option value="24">Hà Giang</option>
             <option value="25">Hà Nam</option>
@@ -158,25 +159,28 @@
         </li>
         <li style="margin-right:  100px">
             <select name="Thoi_gian" >
-                <option value="time"> Chọn thời gian</option>
-                <option value="part_time"> Part time</option>
-                <option value="full_time"> Full time</option>
+                <option value=""> Chọn thời gian</option>
+                <option value="Part time"> Part time</option>
+                <option value="Full time"> Full time</option>
             </select>
         </li>
         <li style="margin-right:  100px">
             <select name="luong">
-                <option> Từ 5tr-7tr </option>
-                <option> Từ 5tr-10tr </option>
-                <option> Từ 10tr-15tr </option>
-                <option> Từ 15tr-20tr </option>
-                <option> Trên 20tr </option>
+                <option value="">Chọn lương</option>
+                <option value="Từ 5tr-7tr"> Từ 5tr-7tr </option>
+                <option value="Từ 7tr-10tr"> Từ 7tr-10tr </option>
+                <option value="Từ 10tr-15tr"> Từ 10tr-15tr </option>
+                <option value="Từ 15tr-20tr"> Từ 15tr-20tr </option>
+                <option value="Trên 20tr"> Trên 20tr </option>
+                <option value="Thỏa thuận"> Thỏa thuận </option>
             </select>
         </li>
     </ul>
-    <button>Tìm Kiếm</button>
+    <input type="submit" name="ok" value="Tìm Kiếm">
+    </form >
     </div>
     <div id="wrapper">
-                <div id=main>
+                <div id="main">
                     <ul>
                         <li class="mySlides">
                 <table style="width: 100%">
