@@ -13,7 +13,7 @@
     <div id="top">
         <img src="catgheplayout/tệp ảnh/logo.jpg" alt="logo"  height="200px" width="800px">
     </div>
-    <div id="menu"
+    <div id="menu">
         <ul>
             <li style="border-left:none"><a href="btlon.php">Trang chủ</a></li>
             <li><a href="tuyendung.php">Tuyển dụng</a></li>
