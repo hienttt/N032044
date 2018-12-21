@@ -12,8 +12,8 @@
     $(document).ready(function())</script>
 </head>
 <body>
-    <div id="top">
-        <img src="anhbt/logo.jpg" alt="logo"  height="200px" width="800px">
+<div id="top">
+        <img src="catgheplayout/tệp ảnh/logo.jpg" alt="logo"  height="200px" width="800px">
     </div>
     <div id="menu">
         <ul>
