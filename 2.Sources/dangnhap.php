@@ -1,6 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tìm kiếm việc làm</title>
+    <link rel="stylesheet" href="btlon.css" type="text/css">
+    <script type="text/javascript" src="btlon.js"></script>
+    <script src="btlon/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function())</script>
+</head>
+<body>
+    <div id="top">
+        <img src="anhbt/logo.jpg" alt="logo"  height="200px" width="800px">
+    </div>
+    <div id="menu">
+        <ul>
+            <li style="border-left:none"><a href="btlon.php">Trang chủ</a></li>
+            <li><a href="tuyendung.php">Tuyển dụng</a></li>
+            <li><a href="congty.php">Công ty</a></li>
+            <li><a href="dangky.php">Đăng ký</a></li>
+            <li><a href="dangnhap.php">Đăng nhập</a></li>
+        </ul>
+    </div>
+    
 <?php
 session_start();
-require('catgheplayout/header.php');
 $loi=array();
 $pass=$mail=NULL;
 $loi["password"]=NULL;
@@ -29,6 +55,7 @@ if(isset($_POST['ok']))
             if(!$conn){
                 die('Ket noi that bai'.mysqli_connect_error());
             } 
+            mysqli_set_charset($conn,"utf8");
             $sqli = "SELECT * FROM users WHERE pass='$pass' AND email='$mail'";
             $result = mysqli_query($conn,$sqli);
             $check=mysqli_num_rows($result);

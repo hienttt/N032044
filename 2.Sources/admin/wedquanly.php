@@ -15,6 +15,7 @@
         <ul>
         <li><a href="quanlybaiviet.php" > Quản lý bài viết</a></li>
         <li><a href="quanlytaikhoan.php"> Quản lý tài khoản</a></li>
+        <li><a href="quanlycongty.php"> Quản lý công ty</a></li>
         </ul>
     </div>
     

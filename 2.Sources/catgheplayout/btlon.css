@@ -2,7 +2,7 @@ body{
     font-family: 'Times New Roman', Times, serif;
     width: 100%;
     margin: auto;
-    background-image: url(image.png);
+    background:rgb(235, 235, 235);;
 }
 #top{
     height: 200px;

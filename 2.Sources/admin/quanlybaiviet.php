@@ -19,13 +19,14 @@
         </ul>
     </div>
     <div id="wrapper">
-        <table>
+    <table>
             <tr > 
                 <td>STT</td>
-                <td>Người dùng</td>
-                <td>Email</td>
-                <td>Quyền truy cập</td>
+                <td>Công ty</td>
+                <td>Công việc</td>
+                <td>Nội dung bài viết</td>
                 <td>Xóa</td>
+                <td>Sửa</td>
             </tr>
             <?php
                 $conn =  mysqli_connect("localhost","root","","login");
@@ -54,11 +55,15 @@
                             }
                     }
                     echo "<td><a href='#' style='color:red'>Xóa</a></td>";
+                    echo "<td><a href='#' style='color:blue'>Duyệt</a></td>";
                 echo"</tr>";   
                 $stt++; 
                 }
             ?>
+             <tr>
+                <td colspan="6"><a href="thembaiviet.php">Thêm bài viết</a> </td>
+            </tr>
         </table>
     </div>
 </body>
-</html>
+</html>  

@@ -46,3 +46,6 @@ ul{
 #wrapper table td{
     border:1px solid slategray;
     }
+    #contain table tr{
+        margin: 30px;
+    }
