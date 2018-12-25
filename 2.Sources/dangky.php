@@ -1,30 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tìm kiếm việc làm</title>
-    <link rel="stylesheet" href="btlon.css" type="text/css">
-    <script type="text/javascript" src="btlon.js"></script>
-    <script src="btlon/jquery-3.3.1.min.js"></script>
-    <script>
-    $(document).ready(function())</script>
-</head>
-<body>
-    <div id="top">
-        <img src="anhbt/logo.jpg" alt="logo"  height="200px" width="800px">
-    </div>
-    <div id="menu">
-        <ul>
-            <li style="border-left:none"><a href="btlon.php">Trang chủ</a></li>
-            <li><a href="tuyendung.php">Tuyển dụng</a></li>
-            <li><a href="congty.php">Công ty</a></li>
-            <li><a href="dangky.php">Đăng ký</a></li>
-            <li><a href="dangnhap.php">Đăng nhập</a></li>
-        </ul>
-    </div>
-    
 <?php
 $loi=array();
 $user=$pass=$mail=$level=NULL;
@@ -95,9 +68,35 @@ if(isset($_POST['ok']))
     }
 }
 ?>
-<fieldset style="width:500px;margin:50px auto 0px;height:300px">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tìm kiếm việc làm</title>
+    <link rel="stylesheet" href="btlon.css" type="text/css">
+    <script type="text/javascript" src="btlon.js"></script>
+    <script src="btlon/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function())</script>
+</head>
+<body>
+    <div id="top">
+        <img src="catgheplayout/tệp ảnh/logo.jpg" alt="logo"  height="200px" width="800px">
+    </div>
+    <div id="menu">
+        <ul>
+            <li style="border-left:none"><a href="btlon.php">Trang chủ</a></li>
+            <li><a href="tuyendung.php">Tuyển dụng</a></li>
+            <li><a href="congty.php">Công ty</a></li>
+            <li><a href="dangky.php">Đăng ký</a></li>
+            <li><a href="dangnhap.php">Đăng nhập</a></li>
+        </ul>
+    </div>
+<fieldset style="width:500px;margin:50px auto 0px;height:200px">
     <form action="dangky.php" method="POST">
-        <table>
+        <table cellspacing="15px">
             <tr>
                 <td > Họ và tên: </td>
                 <td> <input type="text" name="txtn"></td>
@@ -124,7 +123,7 @@ if(isset($_POST['ok']))
         </table>
     </form>
  </fieldset>  
- <div style="width:300px;margin:10px auto;height:150px;text-align:center;corlor:#F00">
+ <div style="width:300px;margin:10px auto;height:150px;text-align:center;corlor:red">
 <?php
     echo $loi["username"];
     echo $loi["password"];

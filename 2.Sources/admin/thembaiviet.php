@@ -1,7 +1,7 @@
 <?php
     $loi=array();
-    $congty=$anh=$nd=$congviec=NULL;
-    $loi["txtct"]= $loi["txtcv"]= $loi["txtnd"]= $loi["kq"]=NULL;
+    $congty=$anh=$nd=$congviec=$luong=$thoigian=$diadiem=$han=NULL;
+    $loi["txtct"]= $loi["txtcv"]= $loi["txtnd"]= $loi["kq"]=$loi["txth"]=$loi["txtdc"]=$loi["txtlg"]=$loi["txttg"]=NULL;
         if(isset($_POST["ok"]))
         {
             if(empty($_POST["txtct"]))
@@ -16,6 +16,32 @@
             }
             else { $congviec=$_POST["txtcv"];}
 
+            if(empty($_POST["txtdc"]))
+            {
+                $loi["txtdc"]="*Xin vui lòng nhập tên địa chỉ </br>";
+            }
+            else { $diadiem=$_POST["txtdc"];}
+
+            if(empty($_POST["txttg"]))
+            {
+                $loi["txttg"]="*Xin vui lòng nhập thời gian làm việc </br>";
+            }
+            else { $thoigian=$_POST["txttg"];}
+
+            if(empty($_POST["txtlg"]))
+            {
+                $loi["txtlg"]="*Xin vui thêm lương cho công việc </br>";
+            }
+            else { $luong=$_POST["txtlg"];}
+
+            if(empty($_POST["txth"]))
+            {
+                $loi["txth"]="*Xin vui lòng nhập hạn nộp hồ sơ </br>";
+            }
+            else {
+                $date = $_POST["txth"]; 
+                $han = date("Y-m-d", $date); 
+                }
            
             if(empty($_POST["txtnd"]))
             {
@@ -29,7 +55,7 @@
                     die('Ket noi that bai'.mysqli_connect_error());
                 }
                 mysqli_set_charset($conn,"utf8");
-                $sql=("insert into congviec(tenct,congviec,mota) values('$congty','$congviec','$nd')");
+                $sql=("insert into congviec(tenct,congviec,mota,luong,tg,diadiem,hannop) values('$congty','$congviec','$nd','$luong','$thoigian','$diadiem','$han')");
                 if (mysqli_query($conn, $sql))
                 //Thông báo nếu thành công
                 $loi["kq"]='Thêm  thành công';
@@ -65,7 +91,7 @@
         <fieldset style="wight:600px;height:450px;margin:40px auto 10px;">
         <legend> Thêm bài viết</legend>
         <form action="thembaiviet.php" method="POST" >
-            <table>
+            <table cellspacing="15px">
                 <tr>
                     <td>Công ty</td>
                     <td><input type="text" size="70" name="txtct"></td>                
@@ -74,14 +100,29 @@
                     <td>Công việc</td>
                     <td><input type="text" size="70" name="txtcv"></td>                
                 </tr>
-                
                 <tr>
-                    <td>Nội dung bài viết</td>
-                    <td><textarea cols="55" rows="10" name="txtnd"></textarea></td>
+                    <td>Địa điểm:</td>
+                    <td><input type="text" size="70" name="txtdc"></td>
+                </tr>
+                <tr>
+                    <td>Thời gian:</td>
+                    <td><input type="text"  name="txttg"></td>
+                </tr>
+                <tr>
+                    <td>Lương:</td>
+                    <td><input type="text"  name="txtlg"></td>
+                </tr>
+                <tr>
+                    <td>Hạn nộp hồ sơ:</td>
+                    <td><input type="text"  name="txth"></td>
+                </tr>
+                <tr>
+                    <td>Nội dung:</td>
+                    <td><textarea cols="60" rows="10" name="txtnd"></textarea></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" value="Thêm" name="ok"></td>
+                    <td><input type="submit" value="Thêm" name="ok" size="50"></td>
                 </tr>
             </table>
         </form>
@@ -90,6 +131,10 @@
                 echo $loi["txtct"]; 
                 echo $loi["txtcv"];
                 echo $loi["txtnd"];
+                echo $loi["txttg"];
+                echo $loi["txtlg"];
+                echo $loi["txtdc"];
+                echo $loi["txth"];
                 echo $loi["kq"] ;       
             ?>
         </div>

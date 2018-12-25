@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="top">
-        <img src="anhbt/logo.jpg" alt="logo"  height="200px" width="800px">
+        <img src="catgheplayout/tệp ảnh/logo.jpg" alt="logo"  height="200px" width="800px">
     </div>
     <div id="menu">
         <ul>
@@ -84,9 +84,9 @@ if(isset($_POST['ok']))
         }
 }
 ?>
-<fieldset style="width:300px;margin:50px auto 0px;height:100px">
+<fieldset style="width:300px;margin:50px auto 0px;height:150px">
     <form action="dangnhap.php" method="POST">
-        <table>
+        <table cellspacing="15px">
             <tr>
                 <td> Email: </td>
                 <td> <input type="text" name="txtmail"></td>
@@ -103,7 +103,7 @@ if(isset($_POST['ok']))
         
     </form>
 </fieldset>
-<div style="width:300px;margin:10px auto;height:150px;text-align:center;corlor:#F00">
+<div style="width:300px;margin:10px auto;height:150px;text-align:center;corlor:red">
 <?php
     
     echo $loi["password"];
