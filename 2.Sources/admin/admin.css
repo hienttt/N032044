@@ -22,9 +22,8 @@ ul{
     margin-top:8px;
 }
 #menu ul li{
-    width:390px;
+    width:264px;
     float:left;
-    
     border: 1px solid black;
     text-align:center;
     background: turquoise;
@@ -46,6 +45,6 @@ ul{
 #wrapper table td{
     border:1px solid slategray;
     }
-    #contain table tr{
-        margin: 30px;
-    }
+ #contain table tr{
+     margin: 30px;
+ }           
