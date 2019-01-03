@@ -6,6 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trang quản lý</title>
     <link rel="stylesheet" type="text/css" href="admin.css">
+    <script type="text/javasrcip" src="../jquery-3.3.1.min.js"></script>
+    <script>
+        function show_confirm()
+        {
+            if(confirm("Bạn có muốn xóa dòng dữ liệu này?"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="top">
@@ -24,33 +38,30 @@
                 <td>STT</td>
                 <td>Công ty</td>
                 <td>Công việc</td>
-                <td>Nội dung bài viết</td>
                 <td>Xóa</td>
                 <td>Sửa</td>
-                <td>Xem chi tiết</td>
+                <td>Xem</td>
             </tr>
             <?php
-                $conn =  mysqli_connect("localhost","root","","login");
+                $conn =  mysqli_connect("localhost","root","","vieclam");
                 if(!$conn){
                     die('Ket noi that bai'.mysqli_connect_error());
                 }
                 mysqli_set_charset($conn,"utf8");
                 $stt=1;
-                $sql=("select tenct,congviec,mota from congviec");
+                $sql=("select * from congviec");
                 $result=mysqli_query($conn,$sql);
                 while($data=mysqli_fetch_assoc($result)){
                 echo "<tr>";
                     echo "<td>$stt</td>";
                     echo "<td>$data[tenct]</td>";
                     echo "<td>$data[congviec]</td>";
-                    echo "<td>$data[mota]</td>";
-                    }
-                    echo "<td><a href='#' style='color:red'>Xóa</a></td>";
-                    echo "<td><a href='#' style='color:blue'>Sửa</a></td>";
-                    echo "<td><a href='#' style='color:violet'>Xem chi tiết</a></td>";
+                    echo "<td><a href='Xoabaiviet.php?id=$data[ID]' onclick='return show_confirm();' style='color:red'>Xóa</a></td>";
+                    echo "<td><a href='chinhsuabaiviet.php?id=$data[ID]' style='color:blue'>Sửa</a></td>";
+                    echo "<td><a href='#' style='color:violet'>Chi tiết</a></td>";
                 echo"</tr>";   
                 $stt++; 
-                
+                }
             ?>
              <tr>
                 <td colspan="7"><a href="thembaiviet.php">Thêm bài viết</a> </td>
@@ -60,5 +71,6 @@
             </tr>
         </table>
     </div>
+
 </body>
 </html>  

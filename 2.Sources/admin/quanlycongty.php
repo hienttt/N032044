@@ -19,46 +19,40 @@
         </ul>
     </div>
     <div id="wrapper">
-        <table>
+    <table>
             <tr > 
                 <td>STT</td>
-                <td>Người dùng</td>
-                <td>Email</td>
-                <td>Quyền truy cập</td>
+                <td>Công ty</td>
+                <td>Hình ảnh</td>
                 <td>Xóa</td>
+                <td>Sửa</td>
+                <td>Xem</td>
             </tr>
             <?php
                 $conn =  mysqli_connect("localhost","root","","vieclam");
                 if(!$conn){
                     die('Ket noi that bai'.mysqli_connect_error());
                 }
+                mysqli_set_charset($conn,"utf8");
                 $stt=1;
-                $sql=("select name,email,level from users");
+                $sql=("select * from congty");
                 $result=mysqli_query($conn,$sql);
                 while($data=mysqli_fetch_assoc($result)){
                 echo "<tr>";
                     echo "<td>$stt</td>";
-                    echo "<td>$data[name]</td>";
-                    echo "<td>$data[email]</td>";
-                    if($data['level']==1)
-                    {
-                        echo"<td>Người tìm việc</td>";
-                    }
-                    else{
-                        if($data['level']==2)
-                            {
-                                echo"<td>Nhà tuyển dụng</td>";
-                            }
-                            else{
-                                echo "<td> Admin</td>";
-                            }
-                    }
+                    echo "<td>$data[tenct]</td>";
+                    echo "<td><img src='../data/$data[anhct]' width='100px'/></td>";
                     echo "<td><a href='#' style='color:red'>Xóa</a></td>";
+                    echo "<td><a href='#' style='color:blue'>Sửa</a></td>";
+                    echo "<td><a href='#' >Chi tiết</a></td>";
                 echo"</tr>";   
                 $stt++; 
                 }
             ?>
+             <tr>
+                <td colspan="7"><a href="themcongty.php">Thêm công ty</a> </td>
+            </tr>
         </table>
     </div>
 </body>
-</html>
+</html>  
