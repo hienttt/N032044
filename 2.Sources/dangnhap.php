@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tìm kiếm việc làm</title>
-    <link rel="stylesheet" href="btlon.css" type="text/css">
+    <link rel="stylesheet" href="catgheplayout/btlon.css" type="text/css">
     <script type="text/javascript" src="btlon.js"></script>
     <script src="btlon/jquery-3.3.1.min.js"></script>
     <script>
@@ -18,8 +18,6 @@
     <div id="menu">
         <ul>
             <li style="border-left:none"><a href="btlon.php">Trang chủ</a></li>
-            <li><a href="tuyendung.php">Tuyển dụng</a></li>
-            <li><a href="congty.php">Công ty</a></li>
             <li><a href="dangky.php">Đăng ký</a></li>
             <li><a href="dangnhap.php">Đăng nhập</a></li>
         </ul>
@@ -31,7 +29,6 @@ $loi=array();
 $pass=$mail=NULL;
 $loi["password"]=NULL;
 $loi["email"]=$loi["login"]=NULL;
-
 if(isset($_POST['ok']))
 {
     if(empty($_POST['txtmail']))
@@ -51,7 +48,7 @@ if(isset($_POST['ok']))
         }   
         if( $pass &&  $mail)
         {
-            $conn =  mysqli_connect("localhost","root","","login");
+            $conn =  mysqli_connect("localhost","root","","vieclam");
             if(!$conn){
                 die('Ket noi that bai'.mysqli_connect_error());
             } 
@@ -64,15 +61,15 @@ if(isset($_POST['ok']))
                 $data=mysqli_fetch_assoc($result);
                 $_SESSION["level"]=$data["level"];
                 if($_SESSION["level"]==3){
-                    header("location:admin/admin.php");
+                    header("location:admin/webquanly.php");
                     exit();
                 }
                 else{
                     if($_SESSION["level"]==2){
-                    header("location:nhatuyendung.php");
+                    header("location:tuyendung/nhatuyendung.php");
                      exit();}
                     else{
-                        header("location:nguoixinviec.php");
+                        header("location:nguoitimviec/btlon1.php");
                         exit();
                     }
                     }
@@ -84,7 +81,7 @@ if(isset($_POST['ok']))
         }
 }
 ?>
-<fieldset style="width:300px;margin:50px auto 0px;height:150px">
+<fieldset style="width:300px;margin:50px auto 0px;height:150px;background-color: white;">
     <form action="dangnhap.php" method="POST">
         <table cellspacing="15px">
             <tr>
