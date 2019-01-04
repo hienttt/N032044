@@ -1,0 +1,113 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    margin: auto;
+    background-image: url(../catgheplayout/image.png);
+}
+#top{
+    height: 200px;
+    margin:auto;
+    width: 800px;
+}
+
+#menu{
+    
+    height: 20px;
+    margin:10px 0 10px 0;
+    background-color: rgb(235, 235, 235);
+    margin: auto;
+    width: 800px;
+}
+#wrapper{
+	width:1000px;
+	background-color:rgb(90,120,170);
+	height:30px;
+	margin:60px auto;
+
+}
+#wrapper ul{
+	list-style-type:none;
+	padding: 0px;
+	margin: 0px;
+}
+#wrapper ul li a{
+	text-decoration: none;
+	color : white;
+
+}
+#wrapper ul li{
+    float:left;
+    margin-right: 140px;
+}
+#buttom{
+    width: 1000px;
+    height: 150px;
+    background-color: rgb(255,255,255);
+    margin: auto;
+}
+#buttom table{
+    border: 1px solid gray;
+}
+#menu ul{
+    list-style-type:none;
+    padding:0px;
+}
+#menu ul li{
+    float:left;
+    width:150px;
+    padding-top: 5px;
+}
+#menu ul li a{
+    text-decoration: none;
+}
+
+#buttom table tr td a{
+    text-decoration: none;
+    color:black;
+}
+.text-right{
+	background-color: white;
+	float: right;
+	width: 200px;
+	height: 50px;
+}
+.pull-right{
+	width:780px;
+	height: 50px;
+	margin: auto;
+}
+.text-danger{
+	color: red;
+}
+#slider{
+    width: 800px;
+    margin: auto;
+    height: 750px;
+    background-color: white;
+}
+.dot{
+	list-style-type:none;
+}
+}
+#message{
+  width: 640px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+#main{
+	 width: 870px;
+    margin: auto;
+    height: 750px;
+    background-color: white;
+}
+.contain{
+  width: 1000px;
+  height: 800px;
+  margin:auto;
+  background: white;
+}
+.contain table tr{
+        margin: 30px;
+    }
